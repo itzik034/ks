@@ -10,7 +10,7 @@
         <a href="#" class="header-menu-item">שאלות נפוצות</a>
         <a href="#" class="header-menu-item">אודות הקורס</a>
         <a href="#" class="header-menu-item header-menu-profile" id="menu-profile"><img src="img/user.png" class="header-profile-img" />&nbsp;<?php echo "איליי"; ?></a>
-        <div id="profile-menu" class="profile-menu profile-menu-is-active">
+        <div id="profile-menu" class="profile-menu">
             <a href="#" class="profile-menu-item">פרופיל</a>
             <a href="#" class="profile-menu-item">הגדרות</a>
             <a href="#" class="profile-menu-item">התנתק</a>
