@@ -24,9 +24,13 @@
                 </div>
             </div>
             <div class="fs2">
-                <img src="img/pic2.jpg" class="fs-img-slider">
-                <img src="img/pic1.jpg" class="fs-img-slider">
-                <img src="img/pic4.jpg" class="fs-img-slider">
+                <div id="the-slider">
+                    <div id="slider-right"><img src="/ks/img/right.png" class="arrows"></div>
+                    <div id="pic-slider">
+                        <img class="slider-images-class" src="/ks/img/slider/pic1.jpg">
+                    </div>
+                    <div id="slider-left"><img src="/ks/img/left.png" class="arrows"></div>
+                </div>
             </div>
         </div>
     </div>

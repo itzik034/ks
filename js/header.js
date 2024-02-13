@@ -1,5 +1,22 @@
 $(document).ready(function()
 {
+    var profile = $("#menu-profile");
+    var menu = $("#profile-menu");
+    var p_position = profile.position();
+
+    profile.click(function()
+    {
+        var menu_width = profile.width() + 10;
+        var menu_top = Math.floor(p_position.top) + (profile.height() * 2) + 10;
+        var menu_left = Math.floor(p_position.left) + (menu.width() / 3) + 5;
+
+        menu.addClass("profile-menu-is-active");
+        menu.css('top', menu_top);
+        menu.css('left', menu_left);
+        menu.css('width', menu_width);
+    });
+    
+    /*
     var clickIt = false;
     var isShown = false;
     function showMenu()
@@ -33,4 +50,5 @@ $(document).ready(function()
     {
         $("#profile-menu").removeClass("profile-menu-is-active");
     });
-  });
+    */
+});
