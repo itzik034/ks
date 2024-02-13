@@ -5,6 +5,8 @@ $(document).ready(function()
     var left = $("#slider-right");
     var right = $("#slider-left");
     var pic_limit = 3;
+    var left2 = $("#left-arrow2");
+    var right2 = $("#right-arrow2");
 
 
     left.click(function()
@@ -27,5 +29,15 @@ $(document).ready(function()
         element.html('<img class="slider-images-class" src="/ks/img/slider/pic' + pic + '.jpg">');
     });
 
+
+    right2.click(function()
+    {
+        alert(1);
+    });
+
+    left2.click(function()
+    {
+        alert(2);
+    });
 
 });
