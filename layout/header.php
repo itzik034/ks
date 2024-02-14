@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="/ks/css/header.css">
+<link rel="stylesheet" href="css/header.css">
 <header class="header-main">
     <h1 id="header-logo">מכינת קורן</h1>
     <div class="header-menu">
-        <a href="/ks/" class="header-menu-item">בית</a>
+        <a href="/git/ks/" class="header-menu-item">בית</a>
         <a href="?page=records" class="header-menu-item">הקלטות</a>
         <a href="?page=pictures" class="header-menu-item">תמונות</a>
         <a href="?page=contact" class="header-menu-item">צור קשר</a>
@@ -12,7 +12,7 @@
         <div id="profile-menu" class="profile-menu">
             <a href="?page=profile" class="profile-menu-item">פרופיל</a>
             <a href="?page=options" class="profile-menu-item">הגדרות</a>
-            <a href="/ks/action/logout.php" class="profile-menu-item">התנתק</a>
+            <a href="action/logout.php" class="profile-menu-item">התנתק</a>
         </div>
     </div>
 </header>

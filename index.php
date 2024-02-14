@@ -4,9 +4,15 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <title>מכינת קורן</title>
 </head>
 <body>
-    <?php include("layout/header.php"); ?>
+    <?php 
+    
+    include("layout/header.php");
+    include("action/connection.php");
+    
+    ?>
 
     <div class="content">
         <div class="first-slide">
@@ -25,22 +31,22 @@
             </div>
             <div class="fs2">
                 <div id="the-slider">
-                    <div id="slider-right"><img src="/ks/img/right.png" class="arrows"></div>
+                    <div id="slider-right"><img src="img/right.png" class="arrows"></div>
                     <div id="pic-slider">
-                        <img class="slider-images-class" src="/ks/img/slider/pic1.jpg">
+                        <img class="slider-images-class" src="img/slider/pic1.jpg">
                     </div>
-                    <div id="slider-left"><img src="/ks/img/left.png" class="arrows"></div>
+                    <div id="slider-left"><img src="img/left.png" class="arrows"></div>
                 </div>
             </div>
         </div>
         <div class="video-fill">
             <h1>סרטון הסבר</h1>
-            <video src="/ks/vid/vid1.mp4" controls></video>
+            <video src="vid/vid1.mp4" controls></video>
         </div>
         <div class="slide4">
             <div class="rec-students">
                 <h1 class="sr_title">תלמידים ממליצים</h1>
-                <img src="/ks/img/students/1.jpg" class="sr_pic">
+                <img src="img/students/1.jpg" class="sr_pic">
                 <span class="sr_name">אביה</span>
                 <p class="sr_text">
                     בתחילת הקורס היה לי דיי קשה בלימודים שהגעתי לקורס של איליי התקדמתי ולמדתי המון דברים באנגלית וחשבון למדתי את לוח הכפל ושיטות לפתור תרגילים ממליץ מאוד.
@@ -48,7 +54,7 @@
             </div>
             <div class="rec-parents">
                 <h1 class="pr_title">הורים ממליצים</h1>
-                <img src="/ks/img/par.png" class="pr_pic">
+                <img src="img/par.png" class="pr_pic">
                 <span class="pr_name">שרית</span>
                 <p class="pr_text">
                     ממליצה בחום 
@@ -62,25 +68,32 @@
             <p>צוות המורים שלנו מורכב מסטודנטים שנבחרו בקפידה ועברו תהליך מיון נרחב שבוחן יכולות מנהיגות עמידה מול קהל וכמובן חתירה למצויינות. אנו מאמינים בצוות החינוכי שלנו בלב שלם ובטוחים שהם עושים ויעשו עבודה נפלאה בתור המורים של הילדים שלכם.</p>
             <div class="team-fill">
                 <div class="arrows2" id="left-arrow2"><</div>
-                <div class="our-team">
-                    <div class="team-pic-fill">
-                        <img src="/ks/img/teachers/1.webp" class="team-pics">
-                        <span>דניאל צוריה</span>
-                    </div>
-                    <!--
-                    <div class="team-pic-fill">
-                        <img src="/ks/img/teachers/2.webp" class="team-pics">
-                        <span>רן בר</span>
-                    </div>
-                    <div class="team-pic-fill">
-                        <img src="/ks/img/teachers/3.webp" class="team-pics">
-                        <span>רלי כהן</span>
-                    </div>
-                    <div class="team-pic-fill">
-                        <img src="/ks/img/teachers/4.webp" class="team-pics">
-                        <span>איליי קורן</span>
-                    </div>
-                    -->
+                <div class="our-team" id="ot">
+                    <?php
+                    
+                    $sql = "SELECT * FROM teachers WHERE id = '1'";
+                    $query = mysqli_query($conn, $sql);
+                    if(mysqli_num_rows($query) >= 0)
+                    {
+                        while($row = mysqli_fetch_array($query))
+                        {
+                            echo '
+                                    <div class="team-pic-fill">
+                                        <img src="img/teachers/' . $row['pic'] . '" class="team-pics">
+                                        <span>' . $row['name'] .'</span>
+                                    </div>
+                                ';
+                                
+                        }
+                    }
+                    else
+                    {
+                        echo "<h1>* עדיין לא עודכנה רשימת המורים *</h1>";
+                    }
+                    
+                    ?>
+                    
+                    
                 </div>
                 <div class="arrows2" id="right-arrow2">></div>
             </div>

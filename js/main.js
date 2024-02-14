@@ -5,8 +5,11 @@ $(document).ready(function()
     var left = $("#slider-right");
     var right = $("#slider-left");
     var pic_limit = 3;
-    var left2 = $("#left-arrow2");
-    var right2 = $("#right-arrow2");
+    var right2 = $("#left-arrow2");
+    var left2 = $("#right-arrow2");
+    var t_num = 1;
+    var t_limit = 4;
+    var ot = $("#ot");
 
 
     left.click(function()
@@ -16,7 +19,7 @@ $(document).ready(function()
         {
             pic = 1;
         }
-        element.html('<img class="slider-images-class" src="/ks/img/slider/pic' + pic + '.jpg">');
+        element.html('<img class="slider-images-class" src="img/slider/pic' + pic + '.jpg">');
     });
     
     right.click(function()
@@ -26,18 +29,61 @@ $(document).ready(function()
         {
             pic = pic_limit;
         }
-        element.html('<img class="slider-images-class" src="/ks/img/slider/pic' + pic + '.jpg">');
+        element.html('<img class="slider-images-class" src="img/slider/pic' + pic + '.jpg">');
     });
-
 
     right2.click(function()
     {
-        alert(1);
+        t_num++;
+        if(t_num > t_limit)
+        {
+            t_num = 1;
+        }
+
+        $.ajax(
+        {
+            url: 'action/get_teacher_info.php',
+            type: 'GET',
+            data: { t_id: t_num },
+            success: function(response) 
+            {
+                if(response != "")
+                {
+                    ot.html(response);
+                }
+                else
+                {
+                    alert(t_num);
+                }
+            }
+        });
     });
 
     left2.click(function()
     {
-        alert(2);
+        t_num--;
+        if(t_num <= 0)
+        {
+            t_num = t_limit;
+        }
+        
+        $.ajax(
+            {
+                url: 'action/get_teacher_info.php',
+                type: 'GET',
+                data: { t_id: t_num },
+                success: function(response) 
+                {
+                    if(response != "")
+                    {
+                        ot.html(response);
+                    }
+                    else
+                    {
+                        alert(t_num);
+                    }
+                }
+            });
     });
 
 });
