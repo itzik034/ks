@@ -1,10 +1,18 @@
+.content
+{
+    padding: 0;
+    margin: 0;
+}
+
 .rc_main
 {
     width: 100%;
+    height: 100vh;
 }
 
 .rc_grades
 {
+    padding-top: 5vh;
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -16,11 +24,129 @@
 
 .rc_grades span
 {
-    font-size: 2em;
+    font-size: 1em;
     background-color: red;
     cursor: pointer;
     border-radius: 500px;
-    padding: 15px;
-    margin: 0 10px;
+    padding: 0.5em 0.8em;
+    margin: 0 1em;
     white-space: nowrap;
+}
+
+.homework
+{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    margin: 5vh 12.5% 0 12.5%;
+    text-align: center;
+}
+
+.rc_col
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 20%;
+}
+
+.rc_row
+{
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+    direction: ltr;
+    justify-content: space-around;
+    background-color: yellow;
+    width: 100%;
+    margin: 1em;
+    padding: 1%;
+    align-items: center;
+}
+
+.rc_title
+{
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rc_row_pic
+{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 5% 0 5% 5%;
+}
+
+.rc_row_text
+{
+    width: 60%;
+}
+
+.rc_row_pic img
+{
+    width: auto;
+    height: 100%;
+    padding: 5%;
+}
+
+.rc_row_text1
+{
+    margin-top: 5%;
+}
+
+.rc_row_text2
+
+{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.rc_text2_prog
+{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.rc_text2_num
+{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    text-align: center;
+    padding: 5%;
+}
+
+.rc_scroll
+{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+.rc_plus
+{
+    font-weight: 900;
+    font-size: 2em;
+    cursor: pointer;
 }
