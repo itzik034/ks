@@ -11,6 +11,16 @@ $(document).ready(function()
     var t_limit = 4;
     var ot = $("#ot");
 
+    $.ajax(
+        {
+            url: 'action/get_teacher_count.php', 
+            type: 'GET', 
+            data: {  }, 
+            success: function(response) 
+            {
+                t_limit = response;
+            }
+        });
 
     left.click(function()
     {

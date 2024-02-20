@@ -8,7 +8,7 @@
         <a href="?page=contact" class="header-menu-item">צור קשר</a>
         <a href="?page=qna" class="header-menu-item">שאלות נפוצות</a>
         <a href="?page=about" class="header-menu-item">אודות הקורס</a>
-        <a class="header-menu-item header-menu-profile" id="menu-profile"><img src="img/user.png" class="header-profile-img" />&nbsp;<?php echo "איליי"; ?></a>
+        <a href="?page=login" class="header-menu-item header-menu-profile" id="menu-profile"><img src="img/user.png" class="header-profile-img" />&nbsp;<span id="login_btn">התחבר</span></a>
         <div id="profile-menu" class="profile-menu">
             <a href="?page=profile" class="profile-menu-item">פרופיל</a>
             <a href="?page=options" class="profile-menu-item">הגדרות</a>

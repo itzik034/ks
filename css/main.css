@@ -147,12 +147,11 @@
 .slide4
 {
     width: 100%;
-    height: 200px;
     margin: 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
 }
 
 .rec-students
@@ -163,6 +162,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.rec-students h1
+{
+    text-align: center;
 }
 
 .rec-parents
@@ -238,4 +242,9 @@
 {
     cursor: pointer;
     font-size: 2em;
+}
+
+@media only screen and (max-width: 600px)
+{
+    
 }
