@@ -2,7 +2,7 @@
 <header class="header-main">
     <h1 id="header-logo">מכינת קורן</h1>
     <div class="header-menu">
-        <a href="/git/ks/" class="header-menu-item">בית</a>
+        <a href="/ks/" class="header-menu-item">בית</a>
         <a href="?page=records" class="header-menu-item">הקלטות</a>
         <a href="?page=pictures" class="header-menu-item">תמונות</a>
         <a href="?page=contact" class="header-menu-item">צור קשר</a>
