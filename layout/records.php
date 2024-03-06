@@ -1,7 +1,26 @@
 <link rel="stylesheet" href="css/records.css" type="text/css">
+<meta charset="UTF-8">
 
 <div class="rc_main">
     <div class="rc_grades">
+        <?php
+        
+        include("action/connection.php");
+        $sql = "SELECT * FROM courses";
+        $query = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($query) > 0)
+        {
+            while($row = mysqli_fetch_array($query))
+            {
+                echo "<span>" . $row['course-name'] . "</span>";
+            }
+        }
+        else
+        {
+            echo "No courses yet.";
+        }
+
+        ?>
         <span>David</span>
         <span>David Shmuelovich</span>
         <span>David</span>

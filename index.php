@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <title>מכינת קורן</title>
@@ -9,7 +10,8 @@
 <body>
     <?php 
     
-    include("layout/header.php");
+    header('Content-Type: text/html; charset=utf-8');
+    include_once("layout/header.php");
     include("action/connection.php");
 
     ?>
@@ -30,6 +32,6 @@
         ?>
     </div>
 
-    <?php include("layout/footer.php"); ?>
+    <?php include_once("layout/footer.php"); ?>
 </body>
 </html>
